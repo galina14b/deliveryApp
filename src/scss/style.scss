@@ -1,0 +1,268 @@
+@import 'normalize';
+@import 'tools';
+
+body {
+  background-color: $background-color;
+}
+
+.header {
+  padding: 20px 70px;
+
+  &__list {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+  }
+}
+
+.list {
+  &__item {
+    padding: 0 30px;
+
+    &:first-of-type {
+      border-right: solid 3px #000000;
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 34px;
+    line-height: 37px;    
+    text-align: justify;
+    text-transform: capitalize;
+    color: #000000;
+    text-decoration: none;
+
+    & svg {
+      padding-right: 10px;
+      stroke: #000000;
+    }
+  }
+}
+
+.colored {
+  color: $main-color;
+
+  & svg {
+    stroke: $main-color;
+  }
+}
+
+.main {
+  padding: 20px 70px;
+  display: flex;
+}
+
+.shops {
+  width: 100%;
+  max-width: 30%;
+  margin-right: 20px;
+  height: 100vh;
+  border: solid $main-color 2px;
+  border-radius: 10px;
+  
+  &__title {
+    margin: 0;
+    text-align: center;
+    font-family: $main-font;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 34px;
+    line-height: 27px;
+    color: $text-main-color;
+  }
+
+  &__buttons {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__btn {
+    margin: 10px auto;
+    height: 70px;
+    width: 250px;
+    font-family: $second-font;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 27px;
+    text-transform: capitalize;
+    color: #000000;
+    background-color: transparent;
+    border: solid $main-color 2px;
+    border-radius: 5px;
+
+    &:hover:not(.active) {
+      cursor: pointer;
+      background-color: $second-color;
+    }
+  }
+}
+
+.product {
+  &__content {
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__card {
+    border: solid 1px $second-color;
+    border-radius: 10px;
+    margin: 10px;
+
+    &-wrapper {
+      padding: 15px;
+    }
+  }
+}
+
+.card {
+  &__img {
+    max-width: 300px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  &__title {
+    color: $text-main-color;
+  }
+
+  &__btn {
+    width: 150px;
+    height: 40px;
+    background-color: $main-color;
+    color: #ffffff;
+    border: solid 1px transparent;
+    border-radius: 5px;
+    font-family: $second-font;
+
+    &:hover {
+      border: solid 1px $main-color;
+      color: $text-main-color;
+      cursor: pointer;
+      background-color: $second-color;
+    }
+  }
+}
+
+.active {
+  background-color: $main-color;
+  color: #ffffff;
+}
+
+.products {
+  width: 100%;
+  max-width: 70%;
+  margin-left: 20px;
+  height: 100vh;
+  border: solid $second-color 2px;
+  border-radius: 10px;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.wrapper {
+  padding: 30px 70px;
+}
+
+.cart__flex {
+  display: flex;
+  width: 92vw;
+}
+
+.userData {
+  width: 100%;
+  max-width: 50%;
+  margin-right: 20px;
+  height: 100vh;
+  border: solid $main-color 2px;
+  border-radius: 10px;
+}
+
+.cartData {
+  width: 100%;
+  max-width: 50%;
+  margin-left: 20px;
+  height: 100vh;
+  border: solid $second-color 2px;
+  border-radius: 10px;
+  overflow: hidden;
+  overflow-y: auto;
+  scroll-behavior: auto;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+
+  &__img {
+    max-width: 300px;
+    margin-right: 20px;
+  }
+
+  &__price {
+    display: inline-block;
+  }
+
+  &__input {
+    display: block;
+  }
+
+}
+
+.form {
+  &__input {
+    margin: 40px 0;
+    display: flex;
+    flex-direction: column;
+    font-family: $second-font;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 27px;
+
+    & label {
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.unit {
+  display: inline;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+
+  &__title {
+    font-family: $second-font;
+    margin-right: 80px;
+  }
+
+  &__btn {
+    width: 200px;
+    height: 40px;
+    background-color: $main-color;
+    color: #ffffff;
+    border: solid 1px transparent;
+    border-radius: 5px;
+    font-family: $second-font;
+    
+    &:hover {
+      border: solid 1px $main-color;
+      color: $text-main-color;
+      cursor: pointer;
+      background-color: $second-color;
+    }
+  }
+}
+
